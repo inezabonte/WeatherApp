@@ -6,13 +6,13 @@ let temp = document.querySelector(".temp")
 let icon = document.querySelector(".icon")
 
 
-start.addEventListener('submit', event => {
+start.addEventListener('click', event => {
     event.preventDefault();
     getData();
 })
 
 function getData() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=`)
         .then(Response => Response.json())
         .then(data => {
             console.log(data)
@@ -25,7 +25,7 @@ function getData() {
             icon.innerHTML = `<img src=svgicon/${iconValue}.svg>`
             name.innerHTML = `${nameValue}, ${country} `
             desc.innerHTML = descValue
-            temp.innerHTML = `${Math.floor(tempValue - 273)}&degC`
+            temp.innerHTML = `${Math.floor(tempValue)}&degC`
         })
 
         .catch(err => {

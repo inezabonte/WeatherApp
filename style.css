@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #1254CC;
+    justify-content: space-evenly;
 
 }
 
@@ -27,6 +28,8 @@ body{
     width: 400px;
     height: 500px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
 }
 
 input{
@@ -41,8 +44,13 @@ input{
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    margin-bottom: 20px;
 }
+
+input:focus{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+
 ::placeholder{
     font-size: 16px;
     color: rgba(255, 255, 255, 0.76);
@@ -50,7 +58,7 @@ input{
 
 button{
     height: 50px;
-    width: 100%;
+    
     border: 0;
     outline: 0;
     border-radius: 5px;
@@ -82,7 +90,7 @@ button:active{
     background-color: rgba(0, 0, 0, 0.12);
     padding: 10px 0 10px 0;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-size: 20px;
 
 }
@@ -100,4 +108,15 @@ img{
     font-size: 20px;
     opacity: 0.5;
 
+}
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+}
+
+a{
+    color: white;
+    cursor: pointer;
 }
