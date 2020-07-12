@@ -4,6 +4,12 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
+}
+:root{
+    --poppins-font: 'Poppins', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 body{
@@ -13,23 +19,20 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #1254CC;
-    justify-content: space-evenly;
 
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--poppins-font);
     text-align: center;
     background: rgba(255, 255, 255, 0.14);
     width: 400px;
-    height: 500px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 550px;
+    box-shadow: var(--box-shadow);
     align-items: center;
-    justify-content: space-between;
 }
 
 input{
@@ -39,11 +42,12 @@ input{
     border-radius: 40px;
     outline: 0;
     padding: 10px 0 10px 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--poppins-font);
     font-size: 18px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 input:focus{
@@ -58,15 +62,15 @@ input:focus{
 
 button{
     height: 50px;
-    
+    margin-bottom: 10px;
     border: 0;
     outline: 0;
     border-radius: 5px;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--poppins-font);
     background-color: #5f8fe9;
-    color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 button:active{
@@ -75,7 +79,7 @@ button:active{
 
 .temp{
     font-size: 50px;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--roboto-font);
 }
 
 .city{
@@ -86,17 +90,11 @@ button:active{
 
 .title{
     margin: 0;
-    color: white;
     background-color: rgba(0, 0, 0, 0.12);
     padding: 10px 0 10px 0;
     width: 100%;
-    margin-bottom: 10px;
     font-size: 20px;
 
-}
-
-.results{
-    color: white;
 }
 
 img{
@@ -111,12 +109,10 @@ img{
 }
 
 footer{
-    font-family: 'Roboto', sans-serif;
-    color: white;
-
+    margin-top: 50px;
+    font-family: var(--roboto-font);
 }
 
 a{
-    color: white;
     cursor: pointer;
 }

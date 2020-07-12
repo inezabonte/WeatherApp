@@ -8,11 +8,15 @@ let icon = document.querySelector(".icon")
 
 start.addEventListener('click', event => {
     event.preventDefault();
-    getData();
+    const text = inputValue.value.trim()
+    text !== "" ? getData() : icon.innerHTML = `<img src =svgicon/unknown.svg>`
+    name.innerHTML = ""
+    desc.innerHTML = ""
+    temp.innerHTML = ""
 })
 
 function getData() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=edb839dfef03a30aa8c5401b5dacc655`)
         .then(Response => Response.json())
         .then(data => {
             console.log(data)
