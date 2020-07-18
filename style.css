@@ -36,7 +36,8 @@ body{
     max-width: 100%;
 }
 
-@media only screen and (max-width: 375px){
+/* 375px screens going down */
+@media only screen and (max-width: 425px){
     body{
         height: auto;
     }
@@ -44,6 +45,13 @@ body{
     .container{
         transform: scale(0.9);
     }
+}
+
+@media only screen and (min-width: 425px){
+    footer{
+        margin-top: 50px;
+    }
+
 }
 
 input{
@@ -59,12 +67,10 @@ input{
     background-color: rgba(0, 0, 0, 0.226);
     margin: 30px;
 }
-
-
-
+ 
 ::placeholder{
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.76);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 button{
@@ -98,6 +104,7 @@ button:hover{
     margin: 20px;
     font-size: 20px;
     opacity: 0.71;
+    
 }
 
 .title{
