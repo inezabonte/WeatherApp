@@ -2,41 +2,30 @@
 <html lang="en">
 <head>
     <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172488282-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-172488282-1');
-    </script>
-
-
-
 </head>
 
 <body>
-
-    <div class="container">
-        <p class="title">Weather</p>
-        <input type="text" class="input-value" placeholder="Enter city name">
-        <button class="submit">Search</button>
-        
-        <!-- The output -->
-        <div class="results">
-            <div class='icon'></div>
-            <p class="temp"></p>
-            <p class="desc"></p>
-            <p class="city"></p>
+    <main>
+        <!-- Input -->
+        <div class="container">
+            <p class="title">Weather</p>
+            <input type="text" id="input-value" placeholder="Enter city name">
+            <button class="submit">Search</button>
+            
+            <!-- The output -->
+            <div class="results">
+                <div class='icon'></div>
+                <p class="temp"></p>
+                <p class="desc"></p>
+                <p class="city"></p>
+            </div>
         </div>
-    
-    </div>
+    </main>
     <script src="app.js"></script>
     <footer>
-        <p>Made With ❤️ by <a href="https://twitter.com/inezabonte" target="_blank">Ineza Bonté</a></p>
+        <p>A product of <a href="https://twitter.com/inezabonte" target="_blank">Ineza Bonté</a>🚀</p>
     </footer>
 </body>
 </html>

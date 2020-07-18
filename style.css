@@ -9,16 +9,16 @@
 :root{
     --poppins-font: 'Poppins', sans-serif;
     --roboto-font: 'Roboto', sans-serif;
-    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 10px 20px #223c75a8;
 }
 
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #1254CC;
+    background-color: #133ecc;
+    height: 100vh;
 
 }
 
@@ -28,11 +28,11 @@ body{
     border-radius: 5px;
     font-family: var(--poppins-font);
     text-align: center;
-    background: rgba(255, 255, 255, 0.14);
-    width: 400px;
-    height: 550px;
+    background: rgb(37, 109, 233);
+    width: auto;
     box-shadow: var(--box-shadow);
     align-items: center;
+    margin-top: 10px;
 }
 
 input{
@@ -46,8 +46,7 @@ input{
     font-size: 18px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px;
 }
 
 input:focus{
@@ -68,13 +67,18 @@ button{
     border-radius: 5px;
     padding: 10px;
     font-family: var(--poppins-font);
-    background-color: #5f8fe9;
+    background-color: rgb(95, 143, 233, 0.5);
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 button:active{
     transform: scale(0.98);
+}
+
+button:hover{
+    background-color:rgba(95, 143, 233, 0.418);
 }
 
 .temp{
@@ -94,6 +98,8 @@ button:active{
     padding: 10px 0 10px 0;
     width: 100%;
     font-size: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
 }
 

@@ -1,5 +1,5 @@
 const start = document.querySelector(".submit")
-const inputValue = document.querySelector(".input-value")
+const inputValue = document.getElementById("input-value")
 let name = document.querySelector(".city")
 let desc = document.querySelector(".desc")
 let temp = document.querySelector(".temp")

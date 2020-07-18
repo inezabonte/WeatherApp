@@ -1,3 +1,6 @@
 svgicon/.DS_Store
 .DS_Store
 icons
+.env
+/node_modules
+package-lock.json
