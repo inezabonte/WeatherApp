@@ -27,9 +27,11 @@ function getData() {
             const iconValue = data['weather'][0]['icon']
 
             icon.innerHTML = `<img src=svgicon/${iconValue}.svg>`
-            name.innerHTML = `${nameValue}, ${country} `
-            desc.innerHTML = descValue
             temp.innerHTML = `${Math.floor(tempValue)}&degC`
+            desc.innerHTML = descValue
+            name.innerHTML = `${nameValue}, ${country} `
+            
+            
         })
 
         .catch(err => {

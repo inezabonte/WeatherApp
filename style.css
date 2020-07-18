@@ -33,6 +33,17 @@ body{
     box-shadow: var(--box-shadow);
     align-items: center;
     margin-top: 10px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 375px){
+    body{
+        height: auto;
+    }
+
+    .container{
+        transform: scale(0.9);
+    }
 }
 
 input{
@@ -115,7 +126,6 @@ img{
 }
 
 footer{
-    margin-top: 20px;
     font-family: var(--roboto-font);
 }
 
