@@ -56,14 +56,11 @@ input{
     font-family: var(--poppins-font);
     font-size: 18px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.226);
     margin: 30px;
 }
 
-input:focus{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
-}
 
 ::placeholder{
     font-size: 16px;
@@ -78,7 +75,7 @@ button{
     border-radius: 5px;
     padding: 10px;
     font-family: var(--poppins-font);
-    background-color: rgb(95, 143, 233, 0.5);
+    background-color: rgba(0, 0, 0, 0.226);
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s;
@@ -89,7 +86,7 @@ button:active{
 }
 
 button:hover{
-    background-color:rgba(95, 143, 233, 0.418);
+    background-color:rgba(95, 143, 233, 0.5);
 }
 
 .temp{
@@ -105,7 +102,7 @@ button:hover{
 
 .title{
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.226);
     padding: 10px 0 10px 0;
     width: 100%;
     font-size: 20px;
