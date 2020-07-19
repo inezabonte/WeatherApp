@@ -28,7 +28,7 @@ body{
     border-radius: 5px;
     font-family: var(--poppins-font);
     text-align: center;
-    background: rgb(37, 109, 233);
+    background: #256de9;
     width: auto;
     box-shadow: var(--box-shadow);
     align-items: center;
