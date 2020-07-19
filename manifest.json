@@ -3,7 +3,7 @@
  "short_name": "Weather",
  "start_url": "index.html",
  "orientation": "portrait-primary",
- "display": "fullscreen",
+ "display": "standalone",
  "background_color": "#256de9",
  "theme_color": "#133ecc",
  "description":"A simple weather app",
