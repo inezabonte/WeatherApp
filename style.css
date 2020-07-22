@@ -18,7 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #133ecc;
-    height: 100vh;
+    height: auto;
 
 }
 
@@ -34,22 +34,24 @@ body{
     align-items: center;
     margin-top: 10px;
     max-width: 100%;
+    transform: scale(0.9);
 }
 
-/* 375px screens going down */
-@media only screen and (max-width: 425px){
+/* 425px screens going up */
+@media only screen and (min-width: 425px){
     body{
-        height: auto;
+        
+        height: 100vh;
     }
 
     .container{
-        transform: scale(0.9);
+        transform: scale(1);
     }
 }
 
-@media only screen and (min-width: 425px){
+@media only screen and (max-width: 425px){
     footer{
-        margin-top: 50px;
+        margin-top: auto;
     }
 
 }
@@ -107,7 +109,7 @@ button:hover{
 
 .title{
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.226);
+    background-color: #0000003a;
     padding: 10px 0 10px 0;
     width: 100%;
     font-size: 20px;
@@ -128,7 +130,10 @@ img{
 }
 
 footer{
+    position: absolute;
+    bottom: 0;
     font-family: var(--roboto-font);
+    
 }
 
 a{

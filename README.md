@@ -1,2 +1,2 @@
 ## Weather App
-This is a simple weather app I made using the OpenWeatherMap Api.
+This is a simple weather app I made using the OpenWeatherMap API.

@@ -16,12 +16,14 @@
 
     <!-- support for others -->
     <link rel="icon" type="image/png" sizes="192x192"  href="icons.ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons.ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="icons.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons.ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons.ico/favicon-16x16.png">
     <!-- End of icons -->
 
     <link rel="manifest" href="/manifest.json">
+    <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+
     <meta name="theme-color" content="#133ecc">
     <meta charset="UTF-8">
     <title>Weather</title>
@@ -47,10 +49,10 @@
             </div>
         </div>
     </main>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
     <script src="app.js"></script>
     <footer>
-        <p>A product of <a href="https://twitter.com/inezabonte" target="_blank">Ineza Bonté</a>🚀</p>
+        <p>Developed by <a href="https://twitter.com/inezabonte" target="_blank">Ineza Bonté</a>🚀</p>
     </footer>
 </body>
 </html>

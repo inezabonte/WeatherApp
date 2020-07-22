@@ -1,3 +1,5 @@
+import API_KEY from './key.js'
+
 const start = document.querySelector(".submit")
 const inputValue = document.getElementById("input-value")
 let name = document.querySelector(".city")
@@ -16,7 +18,7 @@ start.addEventListener('click', event => {
 })
 
 function getData() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=edb839dfef03a30aa8c5401b5dacc655`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=${API_KEY}`)
         .then(Response => Response.json())
         .then(data => {
             const nameValue = data['name']
