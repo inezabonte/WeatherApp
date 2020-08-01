@@ -90,7 +90,11 @@ button{
 }
 
 button:active{
-    transform: scale(0.96);
+    transform: scale(0.98);
+}
+
+button:hover{
+    background-color:rgba(95, 143, 233, 0.5);
 }
 
 .temp{

@@ -21,7 +21,6 @@ function getData() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=${API_KEY}`)
         .then(Response => Response.json())
         .then(data => {
-            console.log(data);
             const nameValue = data['name']
             const country = data['sys']['country']
             const descValue = data['weather'][0]['description']
