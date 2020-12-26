@@ -4,27 +4,36 @@ function Output(props) {
   const { weatherData } = props;
   console.log(weatherData)
   return (
-    <>
-      {(typeof weatherData.country !== 'undefined') ? (
         <div className="results">
-          <div className="icon">
+
+          {weatherData.icon && (
+            <div className="icon">
             <img src={`./weathericons/${weatherData.icon}.svg`} alt="" />
           </div>
-          <p className="temp">
+          ) }
+
+          {weatherData.temp && (
+            <p className="temp">
             {`${weatherData.temp}`}
             &deg;C
           </p>
-          <p className="desc">{weatherData.description}</p>
-          <p className="city">
+          )}
+          
+          {weatherData.description && (
+            <p className="desc">{weatherData.description}</p>
+          )}
+
+          {weatherData.city && (
+            <p className="city">
             {weatherData.city}
             ,
             {' '}
             {weatherData.country}
           </p>
+          )}
+          
         </div>
-      ) : ('') }
-
-    </>
+      
   );
 }
 

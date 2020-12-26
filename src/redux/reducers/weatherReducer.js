@@ -21,6 +21,7 @@ export const fetchWeatherData = (state = initialState, action) => {
     case FETCH_WEATHER_ERROR:
       return{
         ...state,
+        weatherData: {icon: 'unknown'},
         error: action.error
       }
     default:
