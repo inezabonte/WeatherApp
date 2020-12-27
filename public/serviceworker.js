@@ -1,4 +1,4 @@
-const CACHE_NAME = "version-3"
+const CACHE_NAME = "version-1"
 
 const assets = [
   'index.html',
@@ -21,6 +21,8 @@ const assets = [
   'weathericons/50d.svg',
   'weathericons/50n.svg',
   'weathericons/unknown.svg',
+  'disconnected.svg',
+  'offline.html'
 ]
 
 const self = this
@@ -37,14 +39,15 @@ self.addEventListener('install',  (event) => {
 })
 
 //Listen for requests
-self.addEventListener('fetch',  (event) => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request)
-      .then((cacheRes) => {
-        return cacheRes || fetch(event.request)
-      })
+      caches.match(event.request)
+          .then(() => {
+              return fetch(event.request) 
+                  .catch(() => caches.match('offline.html'))
+          })
   )
-})
+});
 
 
 // Activate the SW
