@@ -1,4 +1,4 @@
-const CACHE_NAME = "version-5"
+const CACHE_NAME = "version-6"
 
 const assets = [
   'index.html',
