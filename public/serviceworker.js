@@ -1,7 +1,8 @@
-const CACHE_NAME = "version-1"
+const CACHE_NAME = "version-5"
 
 const assets = [
   'index.html',
+  'offline.html',
   'weathericons/01d.svg',
   'weathericons/01n.svg',
   'weathericons/02d.svg',
@@ -20,9 +21,7 @@ const assets = [
   'weathericons/13n.svg',
   'weathericons/50d.svg',
   'weathericons/50n.svg',
-  'weathericons/unknown.svg',
-  'disconnected.svg',
-  'offline.html'
+  'weathericons/unknown.svg'
 ]
 
 const self = this
