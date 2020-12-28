@@ -8,15 +8,12 @@ function Output(props) {
 
           {weatherData.icon && (
             <div className="icon">
-            <img src={`./weathericons/${weatherData.icon}.svg`} alt="" />
-          </div>
+              <img src={`./weathericons/${weatherData.icon}.svg`} alt="" />
+            </div>
           ) }
 
           {weatherData.temp && (
-            <p className="temp">
-            {`${weatherData.temp}`}
-            &deg;C
-          </p>
+            <p className="temp">{weatherData.temp}&deg;C</p>
           )}
           
           {weatherData.description && (
@@ -25,11 +22,11 @@ function Output(props) {
 
           {weatherData.city && (
             <p className="city">
-            {weatherData.city}
-            ,
-            {' '}
-            {weatherData.country}
-          </p>
+              {weatherData.city}
+              ,
+              {' '}
+              {weatherData.country}
+            </p>
           )}
           
         </div>
