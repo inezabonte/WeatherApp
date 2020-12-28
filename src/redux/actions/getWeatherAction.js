@@ -15,7 +15,7 @@ export const getWeather = (city) => dispatch => {
     .then(res => {
       const payload = {
         icon: res.data.weather[0].icon,
-        temp: Math.round(res.data.main.temp),
+        temp: Math.round(res.data.main.temp).toString(),
         description: res.data.weather[0].description,
         city: res.data.name,
         country: res.data.sys.country,
