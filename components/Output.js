@@ -1,14 +1,13 @@
-import React from 'react';
+import Image from 'next/image'
 
 function Output(props) {
   const { weatherData } = props;
-  console.log(weatherData)
   return (
         <div className="results">
 
           {weatherData.icon && (
             <div className="icon">
-              <img src={`./weathericons/${weatherData.icon}.svg`} alt="" />
+              <Image src={`/weathericons/${weatherData.icon}.svg`} width={128} height={128} />
             </div>
           ) }
 
