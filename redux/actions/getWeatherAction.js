@@ -1,15 +1,12 @@
 import Axios from 'axios';
-
-export const FETCH_WEATHER_SUCCESS = 'FETCH_WEATHER_SUCCESS'
-export const FETCH_WEATHER_ERROR = 'FETCH_WEATHER_ERROR'
-export const UPDATE_INPUT = 'UPDATE_INPUT'
+import * as t from './types'
 
 export const getWeather = (city) => dispatch => {
  return Axios.get('https://api.openweathermap.org/data/2.5/weather',{
    params: {
      q: city,
      units: 'metric',
-     appid: process.env.REACT_APP_API_KEY
+     appid: process.env.NEXT_STATIC_API_KEY
    }
  })
     .then(res => {
@@ -22,13 +19,13 @@ export const getWeather = (city) => dispatch => {
       }
 
       dispatch({
-        type: FETCH_WEATHER_SUCCESS,
+        type: t.FETCH_WEATHER_SUCCESS,
         payload: payload
       })
     })
   .catch(err => {
     dispatch({
-      type: FETCH_WEATHER_ERROR,
+      type: t.FETCH_WEATHER_ERROR,
       error: err
     })
   })
@@ -39,7 +36,7 @@ export const getWeather = (city) => dispatch => {
 
 export const updateInput = (city) => dispatch => {
   dispatch({
-    type: UPDATE_INPUT,
+    type: t.UPDATE_INPUT,
     payload: city
   })
 
