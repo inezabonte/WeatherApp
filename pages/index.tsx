@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import axios from "axios";
 import Image from "next/image";
 import Head from "next/head";
 
-function Home() {
+export default function Home() {
 	const [location, setLocation] = useState("");
 	const [weather, setWeather] = useState({
 		icon: "",
@@ -13,7 +13,7 @@ function Home() {
 		country: "",
 	});
 
-	const onSubmit = (e) => {
+	const onSubmit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		axios
 			.post("/api/getWeather", {
@@ -34,9 +34,8 @@ function Home() {
 			});
 	};
 
-	const onChange = (e) => {
-		setLocation(e.target.value);
-	};
+	const onChange = (e: FormEvent<HTMLInputElement>) =>
+		setLocation(e.currentTarget.value);
 	return (
 		<div>
 			<Head>
@@ -98,5 +97,3 @@ function Home() {
 		</div>
 	);
 }
-
-export default Home;
