@@ -76,6 +76,7 @@ export default function Home() {
 					{weather.icon && (
 						<div className="icon">
 							<Image
+								alt= {weather.description || "Weather icon"}
 								src={`/weathericons/${weather.icon}.svg`}
 								width={128}
 								height={128}
